@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fondo-oscuro {
+  background-color: #2f343a; /* Un gris oscuro */
+  background-image: linear-gradient(to bottom, #2f343a, #1a1d23); /* Un degradado para dar profundidad */
+}
+.bg-gray-900:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.bg-gray-900 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.bg-gray-900 {
+  background-color: #2f3640; /* Azul oscuro */
+  border-color: #4c5154; /* Gris oscuro */
+}
+
+.text-gray-400 {
+  color: #666666; /* Gris claro */
+}
+
+.hover:brightness-150 {
+  filter: brightness(110%);
+  transition: filter 0.3s ease-in-out;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
